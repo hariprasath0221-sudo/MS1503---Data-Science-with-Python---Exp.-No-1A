@@ -1,102 +1,32 @@
-# Experiment 1.A  Employee Data Display Using Python
+# Experiment 1.A - Employee Data Display Using Python
 
-## Aim
+## Description
+A Python program to collect employee details,
+validate salary inputs, and calculate gross and net salary.
 
-To collect employee details, validate inputs, and calculate gross and net salary using Python.
+## Concepts Used
+- Python Input and Output
+- Variables and Data Types
+- Conditional Statements
+- Exception Handling
+- Arithmetic Operations
+- String Formatting
 
-## Algorithm
+## Salary Calculations
+- HRA = 15% of Basic Salary
+- DA = 10% of Basic Salary
+- Gross Salary = Basic + HRA + DA
+- Tax = 8% of Gross Salary
+- Net Salary = Gross Salary - Tax
 
-1. **Start** the program.
-2. **Read Employee Details** from the user:
-   * Input `name` (String) for the employee's full name.
-   * Input `emp_id` (String) for the employee's identification number.
-   * Input `basic` (Float) for the employee's basic salary.
-3. **Validate Input**:
-   * Ensure `basic` is a valid numeric value and check if `basic < 0`. If invalid or negative, display an appropriate error message and terminate the program.
-4. **Compute Allowances**:
-   * Calculate House Rent Allowance: $\text{HRA} = 0.15 \times \text{basic}$.
-   * Calculate Dearness Allowance: $\text{DA} = 0.10 \times \text{basic}$.
-5. **Compute Gross Salary**:
-   * Calculate total earnings before deductions: $\text{Gross Salary} = \text{basic} + \text{HRA} + \text{DA}$.
-6. **Compute Tax Deduction**:
-   * Calculate income tax at $8\%$ of gross pay: $\text{Tax} = 0.08 \times \text{Gross Salary}$.
-7. **Compute Net Salary**:
-   * Calculate take-home pay: $\text{Net Salary} = \text{Gross Salary} - \text{Tax}$.
-8. **Display Formatted Payroll Report**:
-   * Print a structured summary displaying `name`, `emp_id`, `basic`, `HRA`, `DA`, `Gross Salary`, `Tax`, and `Net Salary` formatted to two decimal places.
-9. **Stop** the program.
+## How to Run
 
-## Program
-# Experiment 1.A: Employee Data Display Using Python
+1. Download the repository.
+2. Open the terminal.
+3. Run the following command:
 
-# Step 1: Get Employee Details
-name = input("Enter Employee Name: Hariprasath ")
-emp_id = input("Enter Employee ID: EMP101 ")
+   python employee_salary.py
 
-# Step 2: Validate Basic Salary
-try:
-    basic = float(input("Enter Basic Salary: "))
-
-    if basic < 0:
-        print("Error: Salary cannot be negative.")
-
-    else:
-        # Step 3: Calculate Allowances
-        hra = 0.15 * basic
-        da = 0.10 * basic
-
-        # Step 4: Calculate Gross Salary
-        gross = basic + hra + da
-
-        # Step 5: Calculate Tax
-        tax = 0.08 * gross
-
-        # Step 6: Calculate Net Salary
-        net = gross - tax
-
-        # Step 7: Display Employee Payroll Report
-        print("\n========== EMPLOYEE PAYROLL REPORT ==========")
-
-        print("Employee Name :", name)
-        print("Employee ID   :", emp_id)
-
-        print("---------------------------------------------")
-        print(f"Basic Salary  : Rs. {basic:.2f}")
-        print(f"HRA (15%)     : Rs. {hra:.2f}")
-        print(f"DA (10%)      : Rs. {da:.2f}")
-        print("---------------------------------------------")
-        print(f"Gross Salary  : Rs. {gross:.2f}")
-        print(f"Tax (8%)      : Rs. {tax:.2f}")
-        print("---------------------------------------------")
-        print(f"Net Salary    : Rs. {net:.2f}")
-
-        print("=============================================")
-
-except ValueError:
-    print("Error: Please enter a valid numeric salary.")
-
-## Output
-Enter Employee Name: Hariprasath
-Enter Employee ID: EMP101
-Enter Basic Salary: 30000
-
-========== EMPLOYEE PAYROLL REPORT ==========
-
-Employee Name : Hariprasath
-Employee ID   : EMP101
-
----------------------------------------------
-Basic Salary  : Rs. 30000.00
-HRA (15%)     : Rs. 4500.00
-DA (10%)      : Rs. 3000.00
----------------------------------------------
-Gross Salary  : Rs. 37500.00
-Tax (8%)      : Rs. 3000.00
----------------------------------------------
-Net Salary    : Rs. 34500.00
-
-=============================================
-
-## ✅ Result
-
-The program successfully accepts and validates employee details, calculates allowances and deductions, and displays a well-formatted salary report.
+## Result
+Successfully calculated and displayed
+the employee payroll report using Python.
